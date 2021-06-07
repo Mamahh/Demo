@@ -1,0 +1,8 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
+PROJECT (HELLO)
+LINK_DIRECTORIES(lib)
+set(MYSRC_SRC main.c )
+include_directories(include)
+MESSAGE(STATUS "THis is source dir" ${MYSRC_SRC})
+ADD_EXECUTABLE(demo  ${MYSRC_SRC} ) 
+target_link_libraries(demo libadd.a)
