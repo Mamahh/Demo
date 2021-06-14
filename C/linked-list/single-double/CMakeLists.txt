@@ -1,0 +1,6 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
+PROJECT(LINK)
+set(SINGLE_SRC single_link.c)
+set(DOUBLE_SRC doubly_link.c)
+add_executable(single_link ${SINGLE_SRC})
+add_executable(doubly_link ${DOUBLE_SRC})
