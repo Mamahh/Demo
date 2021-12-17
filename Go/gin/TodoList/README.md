@@ -20,3 +20,8 @@
 
 `127.0.0.1:9090/demo`
 
+
+
+#### Tips
+
+mariadb配置可参考https://github.com/Mamahh/Demo/blob/master/Go/mariadb/README.md
