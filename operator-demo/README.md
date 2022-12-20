@@ -12,8 +12,6 @@ Operator 是由 CoreOS 开发的，用来扩展 Kubernetes API，特定的应用
 
 Operator 的工作原理，实际上是利用了 Kubernetes 的自定义 API 资源（CRD），来描述我们想要部署的“有状态应用”，然后在自定义控制器里，根据自定义 API 对象的变化，来完成具体的部署和运维工作。
 
-<img alt="image-20221211160846607" src="C:\Users\lkh\AppData\Roaming\Typora\typora-user-images\image-20221211160846607.png"/>
-
 #### Operator使用
 
 脚手架选择 operator sdk / kubebuilder。
@@ -554,8 +552,6 @@ $ make generate && make manifests && make install && make run
 $ kubectl get crd | grep "12-03"
 ```
 
-![image-20221204001209467](C:\Users\lkh\AppData\Roaming\Typora\typora-user-images\image-20221204001209467.png)
-
 
 
 ```shell
@@ -569,21 +565,8 @@ $ kubectl get deploy app-sample
 $ kubectl get service app-sample
 ```
 
-![image-20221204001455463](C:\Users\lkh\AppData\Roaming\Typora\typora-user-images\image-20221204001455463.png)
-
-![image-20221204001751252](C:\Users\lkh\AppData\Roaming\Typora\typora-user-images\image-20221204001751252.png)
-
-
 
 ```shell
 ## 修改 config/samples/app_v1_app.yaml, deploy相关资源也对应变化
 # 将 env DEMO 的 value 从 app 改为 app2 
 ```
-
-修改前
-
-![image-20221204001914690](C:\Users\lkh\AppData\Roaming\Typora\typora-user-images\image-20221204001914690.png)
-
-修改后
-
-![image-20221204002120287](C:\Users\lkh\AppData\Roaming\Typora\typora-user-images\image-20221204002120287.png)
